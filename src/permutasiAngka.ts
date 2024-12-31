@@ -1,6 +1,4 @@
 class permutation{
-    private permute:number[]=[]
-    private maxNumberOfPerm=0
     public permutasi(str:string[]):string[][]{
         let result:string[][]=[]
         if(str.length===1){
@@ -17,26 +15,20 @@ class permutation{
         }
         return result
     }
-    public permuteNumber(str:string[]):void{
+    public permuteNumber(str:string[]):number[]{
         let perms=this.permutasi(str)
+        let permute:number[]=[]
         for(let i=0; i<perms.length; i++){
-            this.permute.push(Number(perms[i]))
+            permute.push(Number(perms[i]))
         }
+        return permute
     }
-    public getPermuteNumber():number[]{
-        return this.permute
-    }
-    public findMax(nums:number[]):void{
+    public findMax(nums:number[]):number{
+        let maxNumberOfPerm=0
         for(let i=0; i<nums.length; i++){
-            if(nums[i]>this.maxNumberOfPerm) this.maxNumberOfPerm=nums[i]
+            if(nums[i]>maxNumberOfPerm) maxNumberOfPerm=nums[i]
         }
-    }
-    public getMaxNumber():number{
-        return this.maxNumberOfPerm
-    }
-    public clearVal():void{
-        this.permute=[]
-        this.maxNumberOfPerm=0
+        return maxNumberOfPerm
     }
 }
 

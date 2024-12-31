@@ -5,6 +5,7 @@ import perkalian4angka from "./perkalian4angka";
 import permutasiAngka from "./permutasiAngka";
 import segitiga from "./segitiga";
 import sort from "./sort";
+import tekotek from "./tekotek";
 import TestingOOP from "./testingOOP";
 import ularTangga from "./ularTangga";
 
@@ -99,20 +100,16 @@ import ularTangga from "./ularTangga";
 // 13 \
 // 101 \
 // 165 \
-// 133 \
-// "
+// 133"
 // let soalArr=soal.split(" ")
 // let papanUlarTangga=ularTangga
-// for(let i=0; i<soalArr.length-1; i++){
+// for(let i=0; i<soalArr.length; i++){
 //     if(i!==0){
-//         papanUlarTangga.findPapan(soalArr[i])
-//         let papan=papanUlarTangga.getPapan()
+//         let papan=papanUlarTangga.findPapan(soalArr[i])
+//         // console.log(papan)
 //         papanUlarTangga.findMid(papan)
-//         papanUlarTangga.findResults(papan)
-//         console.log(papanUlarTangga.getResults())
-//         papanUlarTangga.clearResults()
+//         console.log(papanUlarTangga.findResults(papan))
 //     }
-        
 // }
 
 let permutasi=permutasiAngka
@@ -129,11 +126,15 @@ let bagiSoal=soal.split("  ")
 for(let i=0; i<bagiSoal.length; i++){
     if(bagiSoal[i].length>1 && parseInt(bagiSoal[i])!==0){
         let kasus=bagiSoal[i].split(" ")
-        permutasi.permuteNumber(kasus)
-        let permute=permutasi.getPermuteNumber()
+        let permute=permutasi.permuteNumber(kasus)
         console.log(permute)
-        permutasi.findMax(permute)
-        console.log(permutasi.getMaxNumber())
-        permutasi.clearVal()
+        console.log(permutasi.findMax(permute))
     }
 }
+
+// const tekotekKotek=tekotek
+// // const barisPertama="..234"
+// const N=5
+
+// tekotekKotek.laguTekotek(N)
+// console.log(tekotekKotek.getLaguTekotek())
